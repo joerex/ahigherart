@@ -1,5 +1,6 @@
 .idea/
 .sass-cache/
+*.css.map
 
 # dependencies
 /node_modules
