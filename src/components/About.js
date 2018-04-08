@@ -21,7 +21,9 @@ const AboutComponent = (props) => {
             <strong>A HIGHER ART</strong> is an upcoming short documentary series that investigates the art of religious ritual, ceremony, and spectacle. The project is currently in production, filming on location in Penang, Kuala Lampur, Taipei, Singkawang, Bali, and Bangkok.
           </p>
           <MediaQuery query="(max-width: 991px)">
-            <Slideshow/>
+            <div class="inner-slider">
+              <Slideshow/>
+            </div>
           </MediaQuery>
           <p>
             Videos and website coming soon. For more information contact Kirk Zamieroski: <a href="mailto:kirk@ahigherart.com">kirk@ahigherart.com</a>

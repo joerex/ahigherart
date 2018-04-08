@@ -13,6 +13,7 @@ class SlideshowComponent extends Component {
 
   render() {
     const settings = {
+      fade: true,
       initialSlide: this.props.currentSlideIndex,
       slickGoTo: this.props.currentSlideIndex,
       afterChange: this.props.onAfterChange.bind(this),
@@ -23,12 +24,9 @@ class SlideshowComponent extends Component {
     );
 
     return (
-      <div onMouseEnter={this.props.onPauseSlideshow}
-           onMouseLeave={this.props.onResumeSlideshow}>
-        <Slider {...settings} ref={slider => this.slider = slider}>
-          {slides}
-        </Slider>
-      </div>
+      <Slider {...settings} ref={slider => this.slider = slider}>
+        {slides}
+      </Slider>
     )
   }
 }

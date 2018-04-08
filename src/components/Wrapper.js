@@ -8,7 +8,7 @@ import About from './About';
 import Home from './Home';
 import Teaser from './Teaser';
 import './Slideshow.css';
-import IMAGES from '../images';
+import Slideshow from './Slideshow';
 
 class WrapperComponent extends Component {
   constructor(props) {
@@ -24,18 +24,12 @@ class WrapperComponent extends Component {
   }
 
   render() {
-
-    const wrapperStyle = () => {
-      return {
-        backgroundImage: `url(${IMAGES[this.props.currentSlideIndex]})`
-      };
-    };
-
     return (
       <BrowserRouter>
         { this.props.loadingImages ? <i className="loading-spinner fa fa-spinner fa-spin"></i> :
           <React.Fragment>
-            <div id="wrapper"  style={wrapperStyle()}>
+            <Slideshow/>
+            <div id="wrapper">
               <header>
                 <h1><Link to="/">A <span>Higher</span> Art</Link></h1>
                 <nav>
