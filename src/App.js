@@ -16,9 +16,9 @@ const appReducer = (state = {currentSlideIndex: 0, loadingImages: true}, action)
     case 'CHANGE_SLIDE_INDEX':
       return { ...state, currentSlideIndex: action.payload };
     case 'NEXT_SLIDE':
-      if (!state.pauseSlideshow) {
+      if (!state.pauseSlideshow && !state.loadingImages) {
         let index = state.currentSlideIndex === IMAGES.length-1 ? 0 : state.currentSlideIndex+1;
-        return {currentSlideIndex: index};
+        return {...state, currentSlideIndex: index};
       }
       else {
         return state;

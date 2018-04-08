@@ -18,7 +18,7 @@ const AboutComponent = (props) => {
 
         <div className="col-lg-6">
           <p>
-            A Higher Art is an upcoming short documentary series that investigates the art of religious ritual, ceremony and spectacle. The project is currently in production, filming on location in Penang, Kuala Lampur, Taipei, Singkawang, Bali and Bangkok.
+            <strong>A HIGHER ART</strong> is an upcoming short documentary series that investigates the art of religious ritual, ceremony, and spectacle. The project is currently in production, filming on location in Penang, Kuala Lampur, Taipei, Singkawang, Bali, and Bangkok.
           </p>
           <MediaQuery query="(max-width: 991px)">
             <Slideshow/>

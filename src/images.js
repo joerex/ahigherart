@@ -15,11 +15,13 @@ export const loadImages = () => {
     const promises = URLs.map(url => {
       return new Promise((resolve, reject) => {
         const image = new Image;
-        image.onload = () => resolve();
+        image.addEventListener('load', () => resolve());
         image.src = url;
       });
     });
-    return Promise.all(promises).then(() => dispatch(loadedImages()));
+    return Promise.all(promises).then(() => {
+      dispatch(loadedImages());
+    });
   };
 };
 
