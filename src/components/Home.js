@@ -6,12 +6,7 @@ import About from './About';
 const Home = () => {
   return (
     <React.Fragment>
-      <MediaQuery query="(min-width: 1024px)">
-      </MediaQuery>
-      <MediaQuery query="(max-width: 1023px)">
-        <Teaser />
-        <About />
-      </MediaQuery>
+      <div id="home-content"></div>
     </React.Fragment>
   )
 };
